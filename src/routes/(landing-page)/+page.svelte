@@ -1,9 +1,11 @@
 <script lang="ts">
-	import Icon from "@iconify/svelte";
+	import AboutSection from "./about-section.svelte";
 	import HeroSection from "./hero-section.svelte";
 </script>
 
 <HeroSection />
+
+<AboutSection />
 
 <section>
 	<p>

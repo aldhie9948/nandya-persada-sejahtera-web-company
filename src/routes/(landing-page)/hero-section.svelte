@@ -4,8 +4,11 @@
 	import { Button, Heading, P } from "flowbite-svelte";
 </script>
 
-<section id="hero" class="flex h-dvh w-full flex-col justify-start pt-20 lg:justify-center lg:pt-0">
-	<div class="container mx-auto grid h-full grid-cols-2 gap-4 px-5 2xl:px-0">
+<section
+	id="hero"
+	class="flex w-full flex-col justify-start pt-20 lg:h-dvh lg:justify-center lg:pt-0"
+>
+	<div class="container mx-auto grid h-full grid-cols-2 gap-4 px-5 lg:px-10 2xl:px-0">
 		<div class="col-span-2 flex flex-col justify-center space-y-4 lg:col-span-1">
 			<Heading tag="h1" class="text-2xl font-black lg:text-5xl">
 				Solusi <span class="text-primary-500">Kabel Tray</span> & Ladder Modern dan
@@ -15,7 +18,7 @@
 				PT Nandya Persada Sejahtera – Menyediakan Kabel Tray & Ladder Berkualitas Tinggi untuk
 				Proyek Komersial dan Industri.
 			</Heading>
-			<P class="!mb-5 hidden text-slate-600 lg:block">
+			<P class="!mb-5 text-slate-600">
 				Perusahaan terpercaya di bidang manufaktur kabel tray dan ladder yang didesain untuk
 				memenuhi kebutuhan infrastruktur listrik modern. Dengan komitmen terhadap kualitas,
 				keamanan, dan inovasi, kami menyediakan produk yang tahan lama, mudah dipasang, dan sesuai
