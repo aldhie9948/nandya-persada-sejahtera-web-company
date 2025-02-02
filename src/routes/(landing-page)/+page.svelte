@@ -1,11 +1,16 @@
 <script lang="ts">
 	import AboutSection from "./about-section.svelte";
 	import HeroSection from "./hero-section.svelte";
+	import ProductsSection from "./products-section.svelte";
+
+	const { data } = $props();
 </script>
 
 <HeroSection />
 
 <AboutSection />
+
+<ProductsSection bind:products={data.products} />
 
 <section>
 	<p>

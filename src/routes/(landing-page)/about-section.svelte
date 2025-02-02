@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { base } from "$app/paths";
 	import Icon from "@iconify/svelte";
-	import { Badge, Button, Heading, ImagePlaceholder, P } from "flowbite-svelte";
-	import dayjs from "dayjs";
+	import { Badge, Button, Heading, P } from "flowbite-svelte";
 </script>
 
 <section id="tentang-kami" class="bg-white py-20">
