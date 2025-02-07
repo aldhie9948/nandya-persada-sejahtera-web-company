@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from "$app/paths";
+	import Separator from "$lib/components/separator.svelte";
 	import type { Product } from "$lib/types";
 	import Icon from "@iconify/svelte";
 	import { Badge, Button, Card, Heading } from "flowbite-svelte";
@@ -12,31 +13,32 @@
 </script>
 
 <section id="produk" class="py-20">
-	<div class="container mx-auto px-5 lg:px-10 2xl:px-0">
+	<div class="container mx-auto space-y-4 px-5 lg:px-10 2xl:px-0">
 		<Heading tag="h3" class="mb-10">Produk Berkualitas untuk Kebutuhan Industri Anda</Heading>
-		<div
-			class="grid grid-cols-1 justify-items-center gap-x-0 gap-y-2 lg:grid-cols-3 lg:gap-x-2 2xl:grid-cols-4"
-		>
-			{#each products as product, i (i)}
-				<Card img={product.image} imgClass="aspect-square object-contain w-[400px]">
-					<Heading tag="h5">{product.name}</Heading>
-					<p class="mb-5">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, culpa?
-					</p>
-					<div class="mb-5 space-y-2">
-						<span>Type :</span>
-						<div class="flex flex-wrap items-center gap-1">
-							{#each product.type as type, ti (ti)}
-								<Badge rounded>{type}</Badge>
-							{/each}
-						</div>
-					</div>
-					<Button class="w-full space-x-2" href={base.concat("/produk/")}>
-						<span>Lihat Produk</span>
+		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
+			{#each products as product}
+				<div
+					class="flex w-full flex-col justify-between gap-y-4 rounded border bg-white px-4 pb-5 text-center"
+				>
+					<img src={product.image} alt={product.alt} />
+					<span class="text-sm font-semibold sm:text-base">{product.name}</span>
+					<Button href={base.concat("/produk")}>
+						<span>View</span>
 						<Icon icon="lucide:arrow-right" />
 					</Button>
-				</Card>
+				</div>
 			{/each}
+		</div>
+		<Separator className="!my-8" />
+		<p class="text-center text-lg font-medium italic">
+			Kami memahami bahwa setiap proyek memiliki kebutuhan unik. Jika Anda tidak menemukan produk
+			yang sesuai, kami dapat membuat solusi yang disesuaikan untuk Anda!
+		</p>
+		<div class="text-center">
+			<Button class="mx-auto space-x-2 text-center text-lg" href={base.concat("/hubungi-kami")}>
+				<Icon icon="lucide:phone" />
+				<span>Konsultasikan Sekarang</span>
+			</Button>
 		</div>
 	</div>
 </section>

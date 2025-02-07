@@ -1,29 +1,42 @@
 import { base } from "$app/paths";
+import _ from "lodash";
 import type { Product } from "$lib/types.js";
 
 export const load = (ev) => {
 	const products: Product[] = [
 		{
-			name: "Kabel Tray",
-			image: base.concat("/products/cable-tray-type-u.webp"),
-			alt: "cable-tray-type-u",
-			type: ["Type C", "Type U"],
+			name: "Cable Tray C - Type",
+			image: base.concat("/products/cable-tray-c-type.webp"),
+			alt: "cable-tray-c-type",
+			description: "",
 		},
 		{
-			name: "Kabel Ladder",
-			image: base.concat("/products/cable-ladder-type-u.webp"),
-			alt: "cable-tray-type-u",
-			type: ["Type U", "Type W", "Heavy Duty", "Allumunium"],
+			name: "Cable Tray Joining Set",
+			image: base.concat("/products/cable-tray-c-joining-set.webp"),
+			alt: "cable-tray-c-joining-set",
+			description: "",
 		},
 		{
-			name: "Accessories",
-			image: base.concat("/products/cable-tray-covers.webp"),
-			alt: "cable-tray-type-u",
-			type: ["Cover", "Bracket", "Separator"],
+			name: "Cable Duct",
+			image: base.concat("/products/cable-duct.webp"),
+			alt: "cable-duct",
+			description: "",
+		},
+		{
+			name: "Cable Ladder W - Type",
+			image: base.concat("/products/cable-ladder-w-type.webp"),
+			alt: "cable-ladder-w-type",
+			description: "",
+		},
+		{
+			name: "Cable Tray Cover",
+			image: base.concat("/products/cable-tray-cover.webp"),
+			alt: "cable-tray-cover",
+			description: "",
 		},
 	];
 
 	return {
-		products,
+		products: _.take(products, 5),
 	};
 };
