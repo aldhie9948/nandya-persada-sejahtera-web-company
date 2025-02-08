@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { base } from "$app/paths";
+	import HeadingSection from "$lib/components/heading-section.svelte";
 	import Icon from "@iconify/svelte";
-	import { Badge, Button, Heading, P } from "flowbite-svelte";
+	import { Badge, Button, P } from "flowbite-svelte";
 </script>
 
 <section id="tentang-kami" class="bg-white py-20">
 	<div class="container mx-auto px-5 lg:px-10 2xl:px-0">
-		<Heading tag="h3" class="mb-10">Tentang PT Nandya Persada Sejahtera</Heading>
+		<HeadingSection>Tentang PT Nandya Persada Sejahtera</HeadingSection>
 		<div class="grid grid-cols-12 gap-x-0 gap-y-10 sm:gap-y-0 lg:gap-x-5 2xl:gap-x-10">
 			<div class="col-span-12 h-full w-full lg:col-span-5">
 				<img

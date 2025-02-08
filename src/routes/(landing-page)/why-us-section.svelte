@@ -1,4 +1,5 @@
 <script lang="ts">
+	import HeadingSection from "$lib/components/heading-section.svelte";
 	import Separator from "$lib/components/separator.svelte";
 	import Icon from "@iconify/svelte";
 	import { Blockquote, Heading, P } from "flowbite-svelte";
@@ -21,7 +22,7 @@
 		{
 			title: "Kapasitas Produksi Fleksibel",
 			subtitle:
-				"Kami menawarkan berbagai pilihan kabel tray dan aksesoris, serta layanan custom fabrication sesuai dengan kebutuhan proyek Anda.",
+				"Dengan fasilitas produksi yang modern dan tim profesional, kami dapat menangani pesanan dalam berbagai skala tanpa mengorbankan kualitas dan waktu pengiriman.",
 			icon: "icon-park-outline:ad-product",
 			iconClassname: "text-yellow-500",
 		},
@@ -49,9 +50,9 @@
 	];
 </script>
 
-<section id="keunggulan-kami">
+<section id="keunggulan-kami" class="py-20">
 	<div class="container mx-auto space-y-4 px-5 lg:px-10 2xl:px-0">
-		<Heading tag="h3" class="mb-10">Mengapa Memilih PT Nandya Persada Sejahtera?</Heading>
+		<HeadingSection>Mengapa Memilih PT Nandya Persada Sejahtera?</HeadingSection>
 		<div class="flex flex-col items-center">
 			<Icon icon="flowbite:quote-solid" class="text-center text-7xl" />
 			<Blockquote class="text-center text-2xl 2xl:text-4xl"
@@ -67,7 +68,7 @@
 		<div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
 			{#each items as item}
 				<div
-					class="flex gap-2 rounded-md bg-white p-5 shadow-md duration-200 hover:z-10 hover:scale-105"
+					class="flex flex-col gap-2 rounded-md bg-white p-5 text-center shadow-md duration-200 hover:z-10 hover:scale-105 sm:flex-wrap sm:text-left"
 				>
 					<Icon
 						icon={item.icon}
