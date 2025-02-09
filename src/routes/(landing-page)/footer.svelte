@@ -1,26 +1,63 @@
 <script lang="ts">
+	import { base } from "$app/paths";
+	import Icon from "@iconify/svelte";
+	import { Heading } from "flowbite-svelte";
+	interface Props {
+		nav: { label: string; href: string }[];
+	}
+
+	let { nav = $bindable([]) }: Props = $props();
 </script>
 
 <footer class="bg-blue-900/80 py-10 text-white">
 	<div class="container mx-auto px-5 lg:px-10 2xl:px-0">
-		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ab nesciunt quisquam qui omnis
-			vitae exercitationem est odio eius, hic reprehenderit eveniet! Obcaecati, necessitatibus. Ea
-			necessitatibus perferendis ipsam quas libero aliquid distinctio provident fugiat nemo sunt
-			atque, vel dolores perspiciatis sapiente voluptatem repellendus error veritatis velit. Quae
-			fuga quaerat commodi necessitatibus earum dolores eveniet vero illo, illum assumenda,
-			voluptatem doloribus quisquam incidunt soluta cum odit ipsum molestiae odio beatae. Esse, ea,
-			ex cumque fuga commodi laborum perferendis error quasi quos dolor, perspiciatis dolorem? Atque
-			totam, animi ad rerum repellendus quasi delectus nisi iste sapiente rem exercitationem quas
-			possimus provident debitis doloremque, facere quis. Ullam temporibus cumque eaque quo maiores
-			ratione tenetur accusantium ea aperiam fugiat nesciunt tempore minus deleniti nisi, maxime
-			laborum sapiente velit asperiores deserunt aspernatur corporis quam? Tempore recusandae totam
-			qui atque corporis minima nemo? Quia dolores, nemo rem cum neque nihil, rerum fugit quam quod
-			iure inventore facere atque dicta deleniti, saepe odio unde consequatur assumenda soluta
-			similique culpa maiores. Assumenda, eveniet beatae molestiae asperiores neque quas est ducimus
-			eaque delectus nemo dolorum eligendi impedit molestias numquam quasi voluptatibus pariatur
-			iste? Accusantium at vero placeat? Deserunt odio explicabo consequatur labore illo voluptas
-			numquam nobis eveniet eaque corrupti.
-		</p>
+		<div class="grid grid-cols-12 gap-2">
+			<div class="col-span-4 space-y-2">
+				<img
+					src={base.concat("/logo.png")}
+					alt="logo pt nandya persada sejahtera"
+					width={48 * 1.2}
+				/>
+				<Heading tag="h5" class="text-white">PT. Nandya Persada Sejahtera</Heading>
+				<p class="font-light">
+					Jl. Pancasila IV, RT02 RW13, Cicadas, Gunung Putri Kecamatan Gunung Putri, Kabupaten Bogor
+					Jawa Barat 16964 - Indonesia
+				</p>
+				<a href="mailto:nandyapersadanps@gmail.com" target="_blank" class="flex items-center gap-2">
+					<Icon icon="lucide:mail" />
+					<span>nandyapersadanps@gmail.com</span>
+				</a>
+			</div>
+			<div class="col-span-2"></div>
+			<div class="col-span-3 space-y-2">
+				<Heading tag="h5" class="text-white">Quick Links</Heading>
+				{#each nav as item, i (i)}
+					<a href={item.href} class="flex items-center gap-2">
+						<Icon icon="lucide:external-link" />
+						<span>{item.label}</span>
+					</a>
+				{/each}
+			</div>
+			<div class="col-span-3 space-y-4">
+				<Heading tag="h5" class="text-white">Contact Us</Heading>
+				<span class="flex items-center gap-2">
+					<Icon icon="lucide:phone-call" />
+					<p>(021) 8674344</p>
+				</span>
+				<span class="flex items-center gap-2">
+					<Icon icon="lucide:smartphone" />
+					<p>+62 821-1482-1226</p>
+				</span>
+				<a
+					target="_blank"
+					color="green"
+					href="https://wa.me/?phone={6282114821226}"
+					class="flex w-fit items-center space-x-2"
+				>
+					<Icon icon="ic:baseline-whatsapp" />
+					<p>Chat Via Whatsapp</p>
+				</a>
+			</div>
+		</div>
 	</div>
 </footer>
