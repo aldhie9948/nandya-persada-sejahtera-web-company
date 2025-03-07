@@ -11,7 +11,7 @@
 
 <footer class="bg-blue-900/80 py-10 text-white">
 	<div class="container mx-auto px-5 lg:px-10 2xl:px-0">
-		<div class="grid grid-cols-12 gap-2">
+		<div class="grid grid-cols-1 gap-2 gap-y-4 sm:grid-cols-12">
 			<div class="col-span-4 space-y-2">
 				<img
 					src={base.concat("/logo.png")}
@@ -29,7 +29,7 @@
 				</a>
 			</div>
 			<div class="col-span-2"></div>
-			<div class="col-span-3 space-y-2">
+			<div class="col-span-3 space-y-4">
 				<Heading tag="h5" class="text-white">Quick Links</Heading>
 				{#each nav as item, i (i)}
 					<a href={item.href} class="flex items-center gap-2">

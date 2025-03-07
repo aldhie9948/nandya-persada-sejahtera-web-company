@@ -37,5 +37,10 @@
 		"dayjs": "^1.11.13",
 		"lodash": "^4.17.21",
 		"svelte-sonner": "^0.3.28"
+	},
+	"pnpm": {
+		"ignoredBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }
