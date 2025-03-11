@@ -1,6 +1,7 @@
 import { base } from '$app/paths';
 
-export const ssr = true;
+export const prerender = true
+export const trailingSlash = "always"
 
 export function load(ev) {
 	const { pathname } = ev.url;
